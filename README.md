@@ -17,6 +17,9 @@ cd BASLIN
 sudo chmod +x Game.sh
 ./Game.sh
 ```
+type help in cmd it will print all command that are work in the game
+
+
 ### Conclusion
 
 This script serves as a basic framework for a CTF game, providing essential functionalities for generating, validating, and tracking flags.
