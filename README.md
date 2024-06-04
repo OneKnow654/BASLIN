@@ -18,7 +18,7 @@ sudo chmod +x Game.sh
 ./Game.sh
 ```
 type help in cmd it will print all command that are work in the game
-!["help command"](./image/helpmenu.png,"helpmenu")
+!["help command"](https://github.com/OneKnow654/BASLIN/blob/main/image/helpmenu.png,"helpmenu")
 
 ### Conclusion
 
