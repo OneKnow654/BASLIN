@@ -17,8 +17,22 @@ cd BASLIN
 sudo chmod +x Game.sh
 ./Game.sh
 ```
-type help in cmd it will print all command that are work in the game
+##### after run Game.sh the UI
+
+!["UI"](./image/UI.png)
+
+##### type help in cmd it will print all command that are work in the game
+
 !["help command"](./image/helpmenu.png)
+
+
+##### how to contiune after exit just type Y/N from option
+
+!["resume"](./image/resume.png)
+
+##### how to submit a flag using submit `flags`
+
+!["submit"](./image/submit.png)
 
 ### Conclusion
 
