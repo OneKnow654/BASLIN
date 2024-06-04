@@ -14,7 +14,8 @@
 #
 # older Version 1.0.0
 # version="1.1.0"
-version="1.2.0"
+#version="1.2.0"
+version="1.2.1"
 
 
 #-----color-code----\
@@ -94,7 +95,19 @@ echo -e  "${Purple}Your task is to find all the flags and submit them using the 
 #         fi
 #     fi
 # }
+animate_message() {
+    local msg="$1"
+    local delay=0.1
 
+    echo -ne "${Blue}"
+
+    for ((i = 0; i < ${#msg}; i++)); do
+        echo -ne "${msg:$i:1}"
+        sleep "$delay"
+    done
+
+    echo -e "${off}"
+}
 
 count_flags_left() {
     file_name=".generate_hash/hash.txt"
@@ -208,9 +221,40 @@ else
     echo -e "${bgWhite}${Blue}Now u can continue... playing${off}${off}"
 fi  
 }
-$run
+#this line generated file and make sure not to generate flag if 
+# exist 
+function No_repeat(){
+    file_name=".generate_hash/hash.txt"
+    flag_count=$(wc -l < "$file_name")
+    if [ $flag_count -eq 0 ];then
+        $run
+    else
+        clear 
+        echo -e "${bgWhite}NOTE: $flag_count flags are remaining ${off} "
+        echo -e "${Blue}If you wish a fresh start just type [Y/n]: ${off}"
+        read val
+        
+        case $val in
+            [yY] )
+                reset
+            ;;
+            
+            [nN] )
+            
+            animate_message "Game is starting...done"
+            
+            ;;
 
+            *)
+               animate_message "good luck"
+            ;;
+        esac
+        sleep 2
+    fi
 
+}
+
+No_repeat
 
 
 
@@ -379,5 +423,5 @@ case "${cmd_args[0]}" in
     ;;
     
     
-esac
+    esac
 done
