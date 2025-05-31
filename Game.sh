@@ -184,7 +184,7 @@ show_help() {
     echo -e  "${Green}  help              Show this help message${off}"
     echo -e  "${Green}  clear             Clear the screen${off}"
     echo -e  "${Green}  exit or quit      Exit game${off}"
-    echo -e  "${Green}  flagc              Show Remaining flags${off}"
+    echo -e  "${Green}  flagc             Show Remaining flags${off}"
     echo -e  "${Green}  banner            Show banner${off}"
     echo -e  "${Green}  version           Show Version ${off}"
     echo -e  "${Green}  rm                Remove File & Floder ${off}"  
